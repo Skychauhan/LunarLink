@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Link - Owner Info</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="components.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="header-logo">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="header-title">Owner Information</h1>
+                        <p class="header-subtitle">About the portal administrator</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="btn btn-secondary" id="btnBackToDashboard">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        </svg>
+                        Dashboard
+                    </button>
+                    <button class="btn btn-secondary" data-logout>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                            <polyline points="16 17 21 12 16 7"/>
+                            <line x1="21" y1="12" x2="9" y2="12"/>
+                        </svg>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container container-sm">
+            
+            <!-- Owner Profile Card -->
+            <div class="card">
+                
+                <!-- Profile Header -->
+                <div class="owner-profile-header">
+                    <div class="owner-avatar">
+                        <!-- Replace this with your actual image -->
+                        <img src="owner.jpg" alt="Owner Photo" id="ownerPhoto" onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex';">
+                        <!-- Fallback Avatar Icon -->
+                        <div id="avatarFallback" class="avatar-fallback">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Owner Details -->
+                <div class="owner-details">
+                    
+                    <!-- Name -->
+                    <h2 class="owner-name">Akash Chauhan</h2>
+                    <p class="owner-title">Administrator</p>
+                    
+                    <!-- Bio/Description -->
+                    <div class="owner-bio">
+                        <p>
+                            Lunar Link was developed to deliver a seamless and controlled WiFi access experience. With a focus on security, organization, and performance, the system ensures that connectivity is distributed efficiently while maintaining complete oversight and history tracking.
+                        </p>
+                        <p>
+                            All operations are monitored to maintain consistency and reliability.
+                        </p>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="owner-contact">
+                        <h3 class="section-title">Contact Information</h3>
+                        
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>Akash13.Chauhan@ril.com</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>Ext - 1286 </span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="18" cy="6" r="1.5"/>
+                            </svg>
+                            <span>@the_sky_chauhan</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- System Information -->
+                    <div class="owner-system-info">
+                        <h3 class="section-title">System Information</h3>
+                        
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Portal Version</div>
+                                <div class="info-value" id="systemVersion">1.0.0</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Deployment</div>
+                                <div class="info-value">GitHub</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Storage</div>
+                                <div class="info-value">Cloud Base</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Last Updated</div>
+                                <div class="info-value" id="lastUpdated">--</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Instructions/Notes -->
+                    <div class="owner-notes">
+                        <h3 class="section-title">Important Notes</h3>
+                        <ul class="notes-list">
+                            <li>Users can login with today's date (e.g., 16feb2026)</li>
+                            <li>Admin access requires encrypted authentication</li>
+                            <li>Deleted codes are securely stored in a cloud database</li>
+                            <li>Clearing browser cache will NOT delete usage history</li>
+                            <li>Used codes are permanently archived for tracking purposes</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </main>
+    
+    <!-- CSS Styles for Owner Page -->
+    <style>
+        /* Owner Profile Styles */
+        .owner-profile-header {
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            margin: calc(-1 * var(--spacing-xl)) calc(-1 * var(--spacing-xl)) var(--spacing-xl);
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        }
+        
+        .owner-avatar {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 5px solid rgb(0, 0, 0);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            background-color: var(--bg-secondary);
+        }
+        
+        .owner-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .avatar-fallback {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-tertiary);
+            color: var(--text-tertiary);
+        }
+        
+        .owner-details {
+            padding: 0;
+        }
+        
+        .owner-name {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+        }
+        
+        .owner-title {
+            text-align: center;
+            color: var(--accent-primary);
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .owner-bio {
+            background-color: var(--bg-tertiary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-xl);
+            border-left: 4px solid var(--accent-primary);
+        }
+        
+        .owner-bio p {
+            margin-bottom: var(--spacing-md);
+            line-height: 1.7;
+        }
+        
+        .owner-bio p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: var(--radius-sm);
+        }
+        
+        .owner-contact {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            padding: var(--spacing-md);
+            background-color: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-sm);
+            transition: all var(--transition-fast);
+            border: 1px solid var(--border-color);
+        }
+        
+        .contact-item:hover {
+            background-color: var(--bg-tertiary);
+            transform: translateX(4px);
+        }
+        
+        .contact-item svg {
+            color: var(--accent-primary);
+            flex-shrink: 0;
+        }
+        
+        .contact-item span {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        
+        .owner-system-info {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+        }
+        
+        .info-item {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .info-label {
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .info-value {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+        
+        .owner-notes {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+        }
+        
+        .notes-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .notes-list li {
+            padding: var(--spacing-sm) 0;
+            padding-left: var(--spacing-xl);
+            position: relative;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .notes-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-primary);
+            border-radius: 50%;
+        }
+        
+        .notes-list li:not(:last-child) {
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .owner-avatar {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .owner-name {
+                font-size: 1.75rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .owner-profile-header {
+                padding: 1.5rem 0;
+            }
+            
+            .owner-avatar {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="config.js"></script>
+    <script src="db.js"></script>
+    <script src="storage.js"></script>
+    <script src="theme.js"></script>
+    <script src="auth.js"></script>
+    
+    <script>
+        // Owner page specific JavaScript
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Allow both user and admin to access this page
+            if (!Auth.requireAuth(['user', 'root'])) {
+                return;
+            }
+            
+            // Setup back button based on user type
+            setupBackButton();
+            
+            // Load system info
+            loadSystemInfo();
+        });
+        
+        function setupBackButton() {
+            const backBtn = document.getElementById('btnBackToDashboard');
+            const session = Auth.getSession();
+            
+            if (backBtn) {
+                backBtn.addEventListener('click', () => {
+                    if (session && session.type === 'root') {
+                        window.location.href = 'admin.html';
+                    } else {
+                        window.location.href = 'user.html';
+                    }
+                });
+            }
+        }
+        
+        function loadSystemInfo() {
+            // Set version from config
+            const versionEl = document.getElementById('systemVersion');
+            if (versionEl) {
+                versionEl.textContent = AppConfig.version;
+            }
+            
+            // Get last updated from stats
+            const stats = Storage.getStats();
+            const lastUpdatedEl = document.getElementById('lastUpdated');
+            if (lastUpdatedEl && stats.lastUpdated) {
+                const date = new Date(stats.lastUpdated);
+                lastUpdatedEl.textContent = date.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+            }
+        }
+    </script>
+    
+</body>
+</html>

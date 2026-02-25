@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer - Lunar Link</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            min-height: 100vh;
+            background: #0a0a0f;
+            color: #e8e8f0;
+            font-family: 'DM Mono', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Background grid */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        /* Glow orb */
+        body::after {
+            content: '';
+            position: fixed;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .card {
+            position: relative;
+            max-width: 680px;
+            width: 100%;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            animation: fadeUp 0.6s ease-out;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #f87171;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            margin-bottom: 1.75rem;
+        }
+
+        .tag::before {
+            content: '';
+            width: 6px; height: 6px;
+            background: #ef4444;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #fff 40%, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 0.05em;
+            margin-bottom: 2.5rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(99,102,241,0.4), transparent);
+            margin-bottom: 2.5rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6366f1;
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+        }
+
+        .section p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: rgba(232, 232, 240, 0.75);
+        }
+
+        .section p strong {
+            color: #e8e8f0;
+            font-weight: 500;
+        }
+
+        .highlight-box {
+            background: rgba(239, 68, 68, 0.06);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-left: 3px solid #ef4444;
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: rgba(248, 113, 113, 0.9);
+        }
+
+        .footer-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.2);
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .footer-line span {
+            font-family: 'Syne', sans-serif;
+            color: rgba(99,102,241,0.6);
+            font-weight: 600;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 0.7rem 1.5rem;
+            background: rgba(99,102,241,0.1);
+            border: 1px solid rgba(99,102,241,0.3);
+            color: #818cf8;
+            border-radius: 8px;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.8rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .back-btn:hover {
+            background: rgba(99,102,241,0.2);
+            border-color: rgba(99,102,241,0.5);
+            color: #a5b4fc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+    <div class="tag">Legal Disclaimer</div>
+
+    <h1>Use At Your<br>Own Risk</h1>
+    <p class="subtitle">lunar-link / internal project / not for public distribution</p>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <div class="section-label">01 — Purpose</div>
+        <p>
+            <strong>Lunar Link</strong> is a private, internal project built for personal and 
+            experimental use only. This website is <strong>not intended for public use</strong>, 
+            public distribution, or commercial deployment of any kind.
+        </p>
+    </div>
+
+    <div class="section">
+        <div class="section-label">02 — No Warranty</div>
+        <p>
+            This project is provided <strong>"as is"</strong> without any warranty, express or implied. 
+            The creator makes no guarantees regarding the accuracy, reliability, availability, 
+            or fitness of this tool for any particular purpose.
+        </p>
+    </div>
+
+    <div class="highlight-box">
+        ⚠ By accessing or using this website, you acknowledge that you do so entirely 
+        at your own risk. Any misuse, unauthorized access, or unintended consequences 
+        arising from use of this platform are solely the responsibility of the user.
+    </div>
+
+    <div class="section">
+        <div class="section-label">03 — Limitation of Liability</div>
+        <p>
+            The creator of Lunar Link shall not be held responsible or liable for any 
+            direct, indirect, incidental, or consequential damages arising from the 
+            use or misuse of this website by any individual or party.
+        </p>
+    </div>
+
+    <div class="section">
+        <div class="section-label">04 — Misuse</div>
+        <p>
+            Any misuse of this platform, its data, or its features by any person 
+            is <strong>strictly their own responsibility</strong>. The developer disclaims 
+            all liability for actions taken by third parties using or abusing this system.
+        </p>
+    </div>
+
+    <a href="index.html" class="back-btn">← Back to Login</a>
+
+    <div class="footer-line">
+        <span>Lunar Link</span>
+        <span>© 2026 — Private Project. All rights reserved.</span>
+    </div>
+
+</div>
+
+</body>
+</html>
